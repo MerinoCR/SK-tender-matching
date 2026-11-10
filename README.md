@@ -41,10 +41,13 @@ retrieval → exact-SKU evidence assessment → human review.
 
 ## Repository scope
 
-This initial repository baseline contains documentation and safeguards.
+This branch contains the documentation baseline and reviewed migration
+copies of the three core Project documents, with source provenance and
+an accompanying redaction log.
 
-Code, technical evidence, tender documents, and historical outputs
-require separate review before migration.
+Code, product datasets, tender attachments, and supporting historical
+reports are not included in this migration. They require separate review
+and authorization before migration.
 
 ## Governance
 
@@ -57,8 +60,37 @@ model/API integration, or feature development.
 
 ## Documentation
 
-- DATA_POLICY.md — confidentiality and evidence-handling rules.
-- BACKLOG.md — proposed repository tasks and acceptance criteria.
+- [Project brief and requirements](01_PROJECT_BRIEF_AND_REQUIREMENTS.md)
+  — purpose, assessment rules, requirements, and approved pilot criteria.
+- [Design and technical reference](02_DESIGN_AND_TECHNICAL_REFERENCE.md)
+  — design boundaries, technical observations, and design changes.
+- [Status and next steps](03_STATUS_AND_NEXT_STEPS.md)
+  — authoritative detailed current-status and decision record.
+- [Data policy](DATA_POLICY.md)
+  — confidentiality and evidence-handling rules.
+- [Repository backlog](BACKLOG.md)
+  — repository tasks and acceptance criteria.
+- [Migration redaction log](REDACTION_LOG.md)
+  — redaction type, location, and review limitations; no sensitive
+  value is reproduced.
 
-Detailed requirements, design decisions, and current status remain in
-the existing Project documents until reviewed migration is completed.
+### Documentation authority and evidence availability
+
+The three core documents are migration copies from the existing Project.
+Their provenance sections identify the source snapshot and migration
+changes.
+
+Dated historical entries are retained. Later explicit decisions supersede
+earlier statements only within their recorded scope. Migration does not
+approve every draft statement.
+
+Supporting reports, source datasets, code, and tender attachments
+referenced by these documents are not included unless separately migrated.
+References to that evidence are not claims that it has been independently
+inspected or validated in this repository.
+
+Document 03 remains the authoritative detailed status and decision record.
+BACKLOG.md tracks repository tasks rather than a competing pilot status.
+
+Repository migration does not establish full pilot acceptance,
+engineering approval, or production readiness.
