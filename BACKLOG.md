@@ -5,7 +5,7 @@ This is not a replacement for the Project's authoritative status record.
 
 ## R1 — Establish the documentation baseline
 
-Status: In progress
+Status: Complete
 Owner / approver: Erick Merino
 Scope: Repository documentation and confidentiality safeguards only.
 
@@ -47,16 +47,25 @@ Files inspected:
 - BACKLOG.md
 - .gitignore.txt
 
-Finding:
-The documentation baseline is present. The ignore file requires renaming
-to .gitignore. Owner acceptance is not recorded in this task.
+Historical finding at commit
+119d9d9213ecdab2b9650084ff6d3e17b2c1d4e9:
 
+The documentation baseline was present. At that inspection, the ignore
+file required renaming to .gitignore, and owner acceptance had not yet
+been recorded.
+
+Subsequent disposition:
+The ignore filename was corrected and verified. The owner subsequently
+accepted the documentation-only baseline, as recorded below.
 Review limitation:
 This was a current-file and branch/pull-request inspection, not a
 full-history secret audit or software validation.
 
-Correction commit / pull request: Pending
-Final review date: Pending
+Verified corrected baseline:
+9d866e5a5efddfc353b0966aea19b779172d0d73
+
+Final baseline review date: 2026-11-10
+Owner acceptance: Recorded below.
 
 ### Completion rule
 
@@ -86,7 +95,7 @@ engineering approval, or production readiness.
 
 ## R2 — Migrate authoritative project documentation
 
-Status: In progress — documents uploaded; final review and acceptance pending
+Status: Complete — documentation migration accepted; merge pending
 Owner / approver: Erick Merino
 Scope: Reviewed migration of the three core Project documents only.
 
@@ -131,28 +140,35 @@ historical reports as part of this task.
 
 ### Acceptance checklist
 
+Evidence basis:
+Source acquisition is owner-reported. Confidentiality and original-content
+preservation are supported by ChatGPT's recorded review and redaction log.
+Perplexity independently verified the uploaded package against the inspected
+migration attachments using Git file hashes. These checks do not constitute
+an independent comparison against the original unredacted sources. 
+
 Source integrity:
-- [ ] Obtain the complete current versions of all three source files.
-- [ ] Record the source Project, snapshot date, and source filenames.
-- [ ] Confirm that no file is reconstructed from excerpts or summaries.
+- [x] Obtain the complete current versions of all three source files.
+- [x] Record the source Project, snapshot date, and source filenames.
+- [x] Confirm that no file is reconstructed from excerpts or summaries.
 
 Confidentiality:
-- [ ] Review every complete file for credentials, tokens, cookies,
+- [x] Review every complete file for credentials, tokens, cookies,
       session headers, signed access links, personal information,
       and confidential commercial values.
-- [ ] Remove prohibited content from the migration copies if necessary.
-- [ ] Record any redaction without reproducing the sensitive value.
-- [ ] Preserve the original Project files; do not silently overwrite them.
+- [x] Remove prohibited content from the migration copies if necessary.
+- [x] Record any redaction without reproducing the sensitive value.
+- [x] Preserve the original Project files; do not silently overwrite them.
 
 Content preservation:
-- [ ] Preserve decision dates, scope boundaries, and evidence limitations.
-- [ ] Preserve distinctions between observations, requirements,
+- [x] Preserve decision dates, scope boundaries, and evidence limitations.
+- [x] Preserve distinctions between observations, requirements,
       proposals, assumptions, and unresolved questions.
-- [ ] Preserve the separation between document-based assessment,
+- [x] Preserve the separation between document-based assessment,
       engineering confirmation, and commercial readiness.
-- [ ] Do not convert historical proposals into implemented behavior.
-- [ ] Do not reopen closed decisions or imply that tests were rerun.
-- [ ] Do not rewrite document history merely to make it appear current.
+- [x] Do not convert historical proposals into implemented behavior.
+- [x] Do not reopen closed decisions or imply that tests were rerun.
+- [x] Do not rewrite document history merely to make it appear current.
 
 Repository integration:
 - [x] Add the three documents at the repository root.
@@ -160,10 +176,10 @@ Repository integration:
 - [x] Update README.md with working links to the three documents.
 - [x] Identify supporting references that are not included in this migration.
 - [x] Do not describe unavailable supporting evidence as repository-verified.
-- [ ] Review the final diff and record the reviewed commit.
+- [x] Review the final diff and record the reviewed commit.
 
 Owner acceptance:
-- [ ] Record the owner's acceptance of the documentation migration.
+- [x] Record the owner's acceptance of the documentation migration.
 
 ### Migration record
 
@@ -176,8 +192,13 @@ Migration branch: docs/project-documentation-migration
 Uploaded-document baseline commit:
 d563526ee4bce67547b2f523e910e043ec98156a
 
-Pull request: Pending
-Final reviewed commit: Pending
+Pull request: #1
+Final reviewed content commit:
+aeff620c9c5864377cb6c0500a951b475d1fbe62
+
+Review date: 2026-11-10
+Review disposition: No outstanding migration-content or conflict findings.
+Subsequent closure edits are limited to checklist and acceptance records.
 
 Changes beyond copying:
 - Added repository migration provenance to the three core documents.
@@ -197,10 +218,40 @@ Review evidence:
 Verification limits:
 - The exact pre-provenance reviewed copies were not available for an
   independent byte-for-byte preservation comparison by Perplexity.
-- The uploaded GitHub files have not yet received the final branch-diff
-  review against the reviewed migration package.
+- Uploaded-file equivalence to the inspected migration package was
+  independently verified using Git file hashes.
+- The reconciled migration branch was reviewed at the content commit
+  recorded above; original-source comparison limits remain unchanged.
 - No full-history secret audit, software execution, or new validation
   activity was performed.
+  
+### Uploaded-package verification — 2026-11-10
+
+Inspected migration branch commit:
+b890794a2b3344b326ab57fe9c26dc8e670f24d5
+
+Compared main commit:
+7ef3ff852fe454e13c086a16ad47c060993645df
+
+Results:
+- Git file hashes confirm that all three uploaded documents match the
+  inspected attachment package after the intended migration-date update.
+- REDACTION_LOG.md matches the inspected attachment exactly.
+- README document links resolve within the migration-branch file set.
+- No code, product datasets, or tender attachments are included.
+
+Finding at that inspection:
+The newer R2 backlog updates were on main rather than the migration
+branch.
+
+Correction in this change:
+The newer backlog content is copied to the migration branch, with R1
+tracking corrected and this verification record added.
+
+
+Limit:
+This verifies the uploaded package, not byte-for-byte preservation
+against the original unredacted source files.
 
 ### Completion rule
 
@@ -213,10 +264,16 @@ Mark R2 Complete only when:
 
 ### Owner acceptance
 
-Decision: Pending
-Decision date: Pending
-Approved commit: Pending
-Notes: Pending
+Decision: Accepted
+Decision date: 2026-11-10
+Approved content commit:
+aeff620c9c5864377cb6c0500a951b475d1fbe62
+
+Notes:
+Documentation migration accepted with the recorded evidence limitations.
+This acceptance does not authorize code migration, retrieval, execution,
+feature development, or operational deployment, and does not establish
+full pilot acceptance or engineering approval.
 
 ### Boundaries
 
