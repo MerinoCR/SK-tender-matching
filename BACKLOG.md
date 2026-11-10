@@ -86,7 +86,7 @@ engineering approval, or production readiness.
 
 ## R2 — Migrate authoritative project documentation
 
-Status: Prepared — migration not yet executed
+Status: In progress — documents uploaded; final review and acceptance pending
 Owner / approver: Erick Merino
 Scope: Reviewed migration of the three core Project documents only.
 
@@ -108,9 +108,11 @@ Destination: Repository root, preserving the original filenames.
 - 02_DESIGN_AND_TECHNICAL_REFERENCE.md
 - 03_STATUS_AND_NEXT_STEPS.md
 
-Supporting change:
+Supporting changes:
 - Update README.md to link to the migrated documents and explain their
   authority and evidence-availability limits.
+- Include REDACTION_LOG.md to document the redaction type and location
+  without reproducing the sensitive value.
 
 Do not migrate supporting code, datasets, tender attachments, or
 historical reports as part of this task.
@@ -153,11 +155,11 @@ Content preservation:
 - [ ] Do not rewrite document history merely to make it appear current.
 
 Repository integration:
-- [ ] Add the three documents at the repository root.
-- [ ] Add migration provenance and a redaction/change note to each copy.
-- [ ] Update README.md with working links to the three documents.
-- [ ] Identify supporting references that are not included in this migration.
-- [ ] Do not describe unavailable supporting evidence as repository-verified.
+- [x] Add the three documents at the repository root.
+- [x] Add migration provenance and a redaction/change note to each copy.
+- [x] Update README.md with working links to the three documents.
+- [x] Identify supporting references that are not included in this migration.
+- [x] Do not describe unavailable supporting evidence as repository-verified.
 - [ ] Review the final diff and record the reviewed commit.
 
 Owner acceptance:
@@ -168,15 +170,37 @@ Owner acceptance:
 Source Project:
 Saikang Tender Matching — Design & Development
 
-Source snapshot date: Pending
-Migration date: Pending
+Source snapshot date: 2026-11-10
+Migration upload date: 2026-11-10
 Migration branch: docs/project-documentation-migration
+Uploaded-document baseline commit:
+d563526ee4bce67547b2f523e910e043ec98156a
+
 Pull request: Pending
-Reviewed commit: Pending
+Final reviewed commit: Pending
 
 Changes beyond copying:
-Pending — record metadata additions, README changes, and any redactions.
-Do not assume "none" before reviewing complete files.
+- Added repository migration provenance to the three core documents.
+- Redacted one potential customer identifier in document 03.
+- Included REDACTION_LOG.md without reproducing the sensitive value.
+- Updated README.md with document links and authority/evidence notes.
+
+Review evidence:
+- ChatGPT reported reviewing the complete source files and preserving
+  originals.
+- ChatGPT reported preservation checks for the provenance additions.
+- Perplexity inspected the four attached migration files and confirmed
+  provenance structure, the exact redaction marker, and log consistency.
+- GitHub inspection confirmed that all four migration files are present
+  at the migration-branch root.
+
+Verification limits:
+- The exact pre-provenance reviewed copies were not available for an
+  independent byte-for-byte preservation comparison by Perplexity.
+- The uploaded GitHub files have not yet received the final branch-diff
+  review against the reviewed migration package.
+- No full-history secret audit, software execution, or new validation
+  activity was performed.
 
 ### Completion rule
 
