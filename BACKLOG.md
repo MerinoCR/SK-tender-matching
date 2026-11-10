@@ -185,7 +185,7 @@ Migration branch: docs/project-documentation-migration
 Uploaded-document baseline commit:
 d563526ee4bce67547b2f523e910e043ec98156a
 
-Pull request: Pending
+Pull request: #1
 Final reviewed commit: Pending
 
 Changes beyond copying:
