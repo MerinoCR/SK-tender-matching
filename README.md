@@ -2,95 +2,59 @@
 
 ## Purpose
 
-Develop an evidence-based, human-assisted workflow that interprets
-government-tender specifications, selects the appropriate OKKI product
-subfamily, and assesses exact Saikang SKUs against the requirements.
+Develop an evidence-based, human-assisted workflow that interprets government-tender specifications, selects the appropriate OKKI product subfamily, and assesses exact Saikang SKUs against the requirements.
 
-The intended outcome is zero, one, or up to two independently supported
-compliant candidates. Conditional configurations and near matches must
-remain separate from compliant results.
+The intended outcome is zero, one, or up to two independently supported compliant candidates. Conditional configurations and near matches remain separate from compliant results.
 
 ## Current phase
 
-Design and feasibility validation.
-
-Existing Project work includes bounded pilot components and documentary
-assessments. Their migration into this GitHub repository is a separate
-reviewed activity.
-
-This repository is not an operational matching service.
-Repository setup does not establish full pilot acceptance, autonomous
-matching accuracy, engineering approval, or production readiness.
+Design and feasibility validation. This repository is not an operational matching service. Repository setup and policy unit tests do not establish full pilot acceptance, autonomous matching accuracy, engineering approval or production readiness.
 
 ## Intended workflow
 
-Tender interpretation → subfamily selection → authorized scoped
-retrieval → exact-SKU evidence assessment → human review.
+Tender interpretation → subfamily selection → authorized scoped retrieval → exact-SKU evidence assessment → owner-policy disposition → human review.
 
 ## Assessment principles
 
-- Treat the tender's functional configuration as a boundary.
-- Do not assume extra functions are acceptable.
-- Assess each exact SKU independently; never transfer features
-  between related SKUs or models.
+- Treat the tender's functional configuration as a boundary; extra functions are not automatically acceptable.
+- Assess exact SKUs independently; never transfer features between related SKUs or models.
 - Use relevant original English and Chinese descriptions.
-- Preserve missing evidence, ambiguity, and contradictions.
-- Distinguish documentary assessment from engineering confirmation.
+- Preserve missing evidence and contradictions.
+- Apply the dated owner rules with explicit provenance rather than presenting assumptions as quoted facts.
+- Distinguish documentary assessment, owner-policy acceptance, customization requests, engineering confirmation and final-offer approval.
 - Do not force two compliant results when fewer qualify.
 - Keep proposed behavior separate from tested behavior.
 
-## Repository scope
+## Current owner rules
 
-This branch contains the documentation baseline and reviewed migration
-copies of the three core Project documents, with source provenance and
-an accompanying redaction log.
+[Standing owner rules — 2026-11-10](OWNER_RULES_2026_11_10.md) supersedes contrary defaults in the three core documents only for its twelve recorded topics. It covers load basis, positioning, bumpers, storage, antistatic wheels, IV arrangements, backrest customization, rigid four-section construction, full-length cassette travel, rail details, fifth-wheel diameter and separate customizable mattresses. Original tender wording and historical records are preserved.
 
-Code, product datasets, tender attachments, and supporting historical
-reports are not included in this migration. They require separate review
-and authorization before migration.
+## Repository scope and code status
+
+The repository contains the documentation baseline, reviewed migration copies of the three core Project documents, their provenance/redaction log, and a minimal new policy module with synthetic tests. Existing Project pilot code, product datasets, tender attachments and supporting historical reports have not been migrated by this change.
+
+- `policy/owner_rules.py`: versioned policy dispositions from reviewed structured exact-SKU facts.
+- `policy/test_owner_rules.py`: synthetic unit tests, not product evidence.
+- Run: `python -m unittest discover -s policy -p 'test_*.py' -v`
+
+Twelve test methods passed in the response Python environment before the proposed commit. Existing prototype integration and regressions remain pending. The module does not parse tenders, extract facts, retrieve products or generate a final shortlist.
 
 ## Governance
 
-The Project owner approves requirements, scope, technical dispositions,
-and milestones. Owner approval does not replace missing engineering
-confirmation.
-
-Repository changes do not authorize new OKKI retrieval, bulk extraction,
-model/API integration, or feature development.
+The Project owner approves requirements, scope, technical dispositions, commercial release and milestones. Owner approval does not replace missing engineering confirmation. This change does not authorize new OKKI retrieval, bulk extraction, model/API integration or unrelated feature development.
 
 ## Documentation
 
-- [Project brief and requirements](01_PROJECT_BRIEF_AND_REQUIREMENTS.md)
-  — purpose, assessment rules, requirements, and approved pilot criteria.
-- [Design and technical reference](02_DESIGN_AND_TECHNICAL_REFERENCE.md)
-  — design boundaries, technical observations, and design changes.
-- [Status and next steps](03_STATUS_AND_NEXT_STEPS.md)
-  — authoritative detailed current-status and decision record.
-- [Data policy](DATA_POLICY.md)
-  — confidentiality and evidence-handling rules.
-- [Repository backlog](BACKLOG.md)
-  — repository tasks and acceptance criteria.
-- [Migration redaction log](REDACTION_LOG.md)
-  — redaction type, location, and review limitations; no sensitive
-  value is reproduced.
+- [Project brief and requirements](01_PROJECT_BRIEF_AND_REQUIREMENTS.md) — purpose, requirements and approved pilot criteria.
+- [Design and technical reference](02_DESIGN_AND_TECHNICAL_REFERENCE.md) — observations and design boundaries.
+- [Status and next steps](03_STATUS_AND_NEXT_STEPS.md) — detailed historical status and decision record, read with the dated owner-rule addendum.
+- [Standing owner rules and integration backlog](OWNER_RULES_2026_11_10.md) — current superseding decisions, tested scope and remaining acceptance criteria.
+- [Data policy](DATA_POLICY.md) — confidentiality and evidence handling.
+- [Repository backlog](BACKLOG.md) — baseline repository tasks; policy-specific tasks are in the dated addendum.
+- [Migration redaction log](REDACTION_LOG.md) — migration review limitations; no sensitive values reproduced.
 
-### Documentation authority and evidence availability
+### Authority and evidence availability
 
-The three core documents are migration copies from the existing Project.
-Their provenance sections identify the source snapshot and migration
-changes.
+The three core documents remain migration copies with their original provenance sections and dated historical entries. Later explicit decisions supersede earlier statements only within recorded scope. Supporting material is not claimed to have been independently validated merely because a document references it.
 
-Dated historical entries are retained. Later explicit decisions supersede
-earlier statements only within their recorded scope. Migration does not
-approve every draft statement.
-
-Supporting reports, source datasets, code, and tender attachments
-referenced by these documents are not included unless separately migrated.
-References to that evidence are not claims that it has been independently
-inspected or validated in this repository.
-
-Document 03 remains the authoritative detailed status and decision record.
-BACKLOG.md tracks repository tasks rather than a competing pilot status.
-
-Repository migration does not establish full pilot acceptance,
-engineering approval, or production readiness.
+No credentials, signed access links, raw product exports, commercial data or tender attachments are included in this policy update.
