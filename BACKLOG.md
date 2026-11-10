@@ -5,7 +5,7 @@ This is not a replacement for the Project's authoritative status record.
 
 ## R1 — Establish the documentation baseline
 
-Status: In progress
+Status: Complete
 Owner / approver: Erick Merino
 Scope: Repository documentation and confidentiality safeguards only.
 
@@ -47,16 +47,25 @@ Files inspected:
 - BACKLOG.md
 - .gitignore.txt
 
-Finding:
-The documentation baseline is present. The ignore file requires renaming
-to .gitignore. Owner acceptance is not recorded in this task.
+Historical finding at commit
+119d9d9213ecdab2b9650084ff6d3e17b2c1d4e9:
 
+The documentation baseline was present. At that inspection, the ignore
+file required renaming to .gitignore, and owner acceptance had not yet
+been recorded.
+
+Subsequent disposition:
+The ignore filename was corrected and verified. The owner subsequently
+accepted the documentation-only baseline, as recorded below.
 Review limitation:
 This was a current-file and branch/pull-request inspection, not a
 full-history secret audit or software validation.
 
-Correction commit / pull request: Pending
-Final review date: Pending
+Verified corrected baseline:
+9d866e5a5efddfc353b0966aea19b779172d0d73
+
+Final baseline review date: 2026-11-10
+Owner acceptance: Recorded below.
 
 ### Completion rule
 
@@ -86,7 +95,7 @@ engineering approval, or production readiness.
 
 ## R2 — Migrate authoritative project documentation
 
-Status: Prepared — migration not yet executed
+Status: In progress — documents uploaded; final review and acceptance pending
 Owner / approver: Erick Merino
 Scope: Reviewed migration of the three core Project documents only.
 
@@ -108,9 +117,11 @@ Destination: Repository root, preserving the original filenames.
 - 02_DESIGN_AND_TECHNICAL_REFERENCE.md
 - 03_STATUS_AND_NEXT_STEPS.md
 
-Supporting change:
+Supporting changes:
 - Update README.md to link to the migrated documents and explain their
   authority and evidence-availability limits.
+- Include REDACTION_LOG.md to document the redaction type and location
+  without reproducing the sensitive value.
 
 Do not migrate supporting code, datasets, tender attachments, or
 historical reports as part of this task.
@@ -153,11 +164,11 @@ Content preservation:
 - [ ] Do not rewrite document history merely to make it appear current.
 
 Repository integration:
-- [ ] Add the three documents at the repository root.
-- [ ] Add migration provenance and a redaction/change note to each copy.
-- [ ] Update README.md with working links to the three documents.
-- [ ] Identify supporting references that are not included in this migration.
-- [ ] Do not describe unavailable supporting evidence as repository-verified.
+- [x] Add the three documents at the repository root.
+- [x] Add migration provenance and a redaction/change note to each copy.
+- [x] Update README.md with working links to the three documents.
+- [x] Identify supporting references that are not included in this migration.
+- [x] Do not describe unavailable supporting evidence as repository-verified.
 - [ ] Review the final diff and record the reviewed commit.
 
 Owner acceptance:
@@ -168,15 +179,68 @@ Owner acceptance:
 Source Project:
 Saikang Tender Matching — Design & Development
 
-Source snapshot date: Pending
-Migration date: Pending
+Source snapshot date: 2026-11-10
+Migration upload date: 2026-11-10
 Migration branch: docs/project-documentation-migration
+Uploaded-document baseline commit:
+d563526ee4bce67547b2f523e910e043ec98156a
+
 Pull request: Pending
-Reviewed commit: Pending
+Final reviewed commit: Pending
 
 Changes beyond copying:
-Pending — record metadata additions, README changes, and any redactions.
-Do not assume "none" before reviewing complete files.
+- Added repository migration provenance to the three core documents.
+- Redacted one potential customer identifier in document 03.
+- Included REDACTION_LOG.md without reproducing the sensitive value.
+- Updated README.md with document links and authority/evidence notes.
+
+Review evidence:
+- ChatGPT reported reviewing the complete source files and preserving
+  originals.
+- ChatGPT reported preservation checks for the provenance additions.
+- Perplexity inspected the four attached migration files and confirmed
+  provenance structure, the exact redaction marker, and log consistency.
+- GitHub inspection confirmed that all four migration files are present
+  at the migration-branch root.
+
+Verification limits:
+- The exact pre-provenance reviewed copies were not available for an
+  independent byte-for-byte preservation comparison by Perplexity.
+- Uploaded-file equivalence to the inspected migration package was
+  independently verified using Git file hashes.
+- Final review of the reconciled branch remains pending.
+- No full-history secret audit, software execution, or new validation
+  activity was performed.
+  
+### Uploaded-package verification — 2026-11-10
+
+Inspected migration branch commit:
+b890794a2b3344b326ab57fe9c26dc8e670f24d5
+
+Compared main commit:
+7ef3ff852fe454e13c086a16ad47c060993645df
+
+Results:
+- Git file hashes confirm that all three uploaded documents match the
+  inspected attachment package after the intended migration-date update.
+- REDACTION_LOG.md matches the inspected attachment exactly.
+- README document links resolve within the migration-branch file set.
+- No code, product datasets, or tender attachments are included.
+
+Finding at that inspection:
+The newer R2 backlog updates were on main rather than the migration
+branch.
+
+Correction in this change:
+The newer backlog content is copied to the migration branch, with R1
+tracking corrected and this verification record added.
+
+Remaining action:
+Review the resulting branch before owner acceptance.
+
+Limit:
+This verifies the uploaded package, not byte-for-byte preservation
+against the original unredacted source files.
 
 ### Completion rule
 
