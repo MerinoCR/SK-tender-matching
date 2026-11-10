@@ -26,8 +26,8 @@ next tasks—without authorizing implementation or data migration.
       minimized evidence-handling requirements.
 - [x] BACKLOG.md includes proposed tasks, acceptance criteria,
       and explicitly deferred activities.
-- [ ] Rename .gitignore.txt to .gitignore, preserving its contents.
-- [ ] Confirm that .gitignore exists at the repository root and
+- [x] Rename .gitignore.txt to .gitignore, preserving its contents.
+- [x] Confirm that .gitignore exists at the repository root and
       .gitignore.txt no longer exists.
 - [x] The inspected baseline contains only the four preparation files;
       no code, product datasets, or tender attachments are included.
