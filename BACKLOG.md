@@ -95,7 +95,7 @@ engineering approval, or production readiness.
 
 ## R2 — Migrate authoritative project documentation
 
-Status: In progress — documents uploaded; final review and acceptance pending
+Status: Complete — documentation migration accepted; merge pending
 Owner / approver: Erick Merino
 Scope: Reviewed migration of the three core Project documents only.
 
@@ -169,10 +169,10 @@ Repository integration:
 - [x] Update README.md with working links to the three documents.
 - [x] Identify supporting references that are not included in this migration.
 - [x] Do not describe unavailable supporting evidence as repository-verified.
-- [ ] Review the final diff and record the reviewed commit.
+- [x] Review the final diff and record the reviewed commit.
 
 Owner acceptance:
-- [ ] Record the owner's acceptance of the documentation migration.
+- [x] Record the owner's acceptance of the documentation migration.
 
 ### Migration record
 
@@ -186,7 +186,12 @@ Uploaded-document baseline commit:
 d563526ee4bce67547b2f523e910e043ec98156a
 
 Pull request: #1
-Final reviewed commit: Pending
+Final reviewed content commit:
+aeff620c9c5864377cb6c0500a951b475d1fbe62
+
+Review date: 2026-11-10
+Review disposition: No outstanding migration-content or conflict findings.
+Subsequent closure edits are limited to checklist and acceptance records.
 
 Changes beyond copying:
 - Added repository migration provenance to the three core documents.
@@ -208,7 +213,8 @@ Verification limits:
   independent byte-for-byte preservation comparison by Perplexity.
 - Uploaded-file equivalence to the inspected migration package was
   independently verified using Git file hashes.
-- Final review of the reconciled branch remains pending.
+- The reconciled migration branch was reviewed at the content commit
+  recorded above; original-source comparison limits remain unchanged.
 - No full-history secret audit, software execution, or new validation
   activity was performed.
   
@@ -235,8 +241,6 @@ Correction in this change:
 The newer backlog content is copied to the migration branch, with R1
 tracking corrected and this verification record added.
 
-Remaining action:
-Review the resulting branch before owner acceptance.
 
 Limit:
 This verifies the uploaded package, not byte-for-byte preservation
@@ -253,10 +257,16 @@ Mark R2 Complete only when:
 
 ### Owner acceptance
 
-Decision: Pending
-Decision date: Pending
-Approved commit: Pending
-Notes: Pending
+Decision: Accepted
+Decision date: 2026-11-10
+Approved content commit:
+aeff620c9c5864377cb6c0500a951b475d1fbe62
+
+Notes:
+Documentation migration accepted with the recorded evidence limitations.
+This acceptance does not authorize code migration, retrieval, execution,
+feature development, or operational deployment, and does not establish
+full pilot acceptance or engineering approval.
 
 ### Boundaries
 
