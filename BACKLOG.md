@@ -140,28 +140,35 @@ historical reports as part of this task.
 
 ### Acceptance checklist
 
+Evidence basis:
+Source acquisition is owner-reported. Confidentiality and original-content
+preservation are supported by ChatGPT's recorded review and redaction log.
+Perplexity independently verified the uploaded package against the inspected
+migration attachments using Git file hashes. These checks do not constitute
+an independent comparison against the original unredacted sources. 
+
 Source integrity:
-- [ ] Obtain the complete current versions of all three source files.
-- [ ] Record the source Project, snapshot date, and source filenames.
-- [ ] Confirm that no file is reconstructed from excerpts or summaries.
+- [x] Obtain the complete current versions of all three source files.
+- [x] Record the source Project, snapshot date, and source filenames.
+- [x] Confirm that no file is reconstructed from excerpts or summaries.
 
 Confidentiality:
-- [ ] Review every complete file for credentials, tokens, cookies,
+- [x] Review every complete file for credentials, tokens, cookies,
       session headers, signed access links, personal information,
       and confidential commercial values.
-- [ ] Remove prohibited content from the migration copies if necessary.
-- [ ] Record any redaction without reproducing the sensitive value.
-- [ ] Preserve the original Project files; do not silently overwrite them.
+- [x] Remove prohibited content from the migration copies if necessary.
+- [x] Record any redaction without reproducing the sensitive value.
+- [x] Preserve the original Project files; do not silently overwrite them.
 
 Content preservation:
-- [ ] Preserve decision dates, scope boundaries, and evidence limitations.
-- [ ] Preserve distinctions between observations, requirements,
+- [x] Preserve decision dates, scope boundaries, and evidence limitations.
+- [x] Preserve distinctions between observations, requirements,
       proposals, assumptions, and unresolved questions.
-- [ ] Preserve the separation between document-based assessment,
+- [x] Preserve the separation between document-based assessment,
       engineering confirmation, and commercial readiness.
-- [ ] Do not convert historical proposals into implemented behavior.
-- [ ] Do not reopen closed decisions or imply that tests were rerun.
-- [ ] Do not rewrite document history merely to make it appear current.
+- [x] Do not convert historical proposals into implemented behavior.
+- [x] Do not reopen closed decisions or imply that tests were rerun.
+- [x] Do not rewrite document history merely to make it appear current.
 
 Repository integration:
 - [x] Add the three documents at the repository root.
