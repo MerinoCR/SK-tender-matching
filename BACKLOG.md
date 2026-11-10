@@ -86,14 +86,125 @@ engineering approval, or production readiness.
 
 ## R2 — Migrate authoritative project documentation
 
-Acceptance criteria:
-- Review the current brief, technical reference, and status documents.
-- Remove prohibited sensitive content without erasing material decisions.
-- Preserve decision dates, evidence limitations, and historical context.
-- Identify the authoritative status record and avoid competing summaries.
-- Record the source version and migration date.
-- Review the migration diff before approval.
+Status: Prepared — migration not yet executed
+Owner / approver: Erick Merino
+Scope: Reviewed migration of the three core Project documents only.
 
+### Objective
+
+Make the repository a usable documentation handoff by migrating the
+current requirements, technical reference, and authoritative status record.
+
+Preserve existing decisions, historical context, evidence limitations,
+and the distinction between intended and tested behavior.
+
+### Files in scope
+
+Source: Saikang Tender Matching — Design & Development Project files.
+
+Destination: Repository root, preserving the original filenames.
+
+- 01_PROJECT_BRIEF_AND_REQUIREMENTS.md
+- 02_DESIGN_AND_TECHNICAL_REFERENCE.md
+- 03_STATUS_AND_NEXT_STEPS.md
+
+Supporting change:
+- Update README.md to link to the migrated documents and explain their
+  authority and evidence-availability limits.
+
+Do not migrate supporting code, datasets, tender attachments, or
+historical reports as part of this task.
+
+### Authority and interpretation
+
+- Document 01 records requirements and the approved pilot criteria.
+- Document 02 records design, technical references, and design changes.
+- Document 03 remains the authoritative detailed current-status and
+  decision record.
+- Dated historical entries remain historical; later explicit decisions
+  supersede earlier statements only within their recorded scope.
+- Migration does not approve every draft statement or change any
+  acceptance decision.
+- BACKLOG.md tracks repository tasks, not a competing pilot-status record.
+
+### Acceptance checklist
+
+Source integrity:
+- [ ] Obtain the complete current versions of all three source files.
+- [ ] Record the source Project, snapshot date, and source filenames.
+- [ ] Confirm that no file is reconstructed from excerpts or summaries.
+
+Confidentiality:
+- [ ] Review every complete file for credentials, tokens, cookies,
+      session headers, signed access links, personal information,
+      and confidential commercial values.
+- [ ] Remove prohibited content from the migration copies if necessary.
+- [ ] Record any redaction without reproducing the sensitive value.
+- [ ] Preserve the original Project files; do not silently overwrite them.
+
+Content preservation:
+- [ ] Preserve decision dates, scope boundaries, and evidence limitations.
+- [ ] Preserve distinctions between observations, requirements,
+      proposals, assumptions, and unresolved questions.
+- [ ] Preserve the separation between document-based assessment,
+      engineering confirmation, and commercial readiness.
+- [ ] Do not convert historical proposals into implemented behavior.
+- [ ] Do not reopen closed decisions or imply that tests were rerun.
+- [ ] Do not rewrite document history merely to make it appear current.
+
+Repository integration:
+- [ ] Add the three documents at the repository root.
+- [ ] Add migration provenance and a redaction/change note to each copy.
+- [ ] Update README.md with working links to the three documents.
+- [ ] Identify supporting references that are not included in this migration.
+- [ ] Do not describe unavailable supporting evidence as repository-verified.
+- [ ] Review the final diff and record the reviewed commit.
+
+Owner acceptance:
+- [ ] Record the owner's acceptance of the documentation migration.
+
+### Migration record
+
+Source Project:
+Saikang Tender Matching — Design & Development
+
+Source snapshot date: Pending
+Migration date: Pending
+Migration branch: docs/project-documentation-migration
+Pull request: Pending
+Reviewed commit: Pending
+
+Changes beyond copying:
+Pending — record metadata additions, README changes, and any redactions.
+Do not assume "none" before reviewing complete files.
+
+### Completion rule
+
+Mark R2 Complete only when:
+1. All three complete files have been reviewed and migrated.
+2. Source provenance and any changes/redactions are recorded.
+3. README links and documentation-authority notes are updated.
+4. The final diff has been reviewed.
+5. The owner explicitly accepts the migration.
+
+### Owner acceptance
+
+Decision: Pending
+Decision date: Pending
+Approved commit: Pending
+Notes: Pending
+
+### Boundaries
+
+R2 does not authorize:
+- Code or dataset migration.
+- New product assessment or reclassification.
+- OKKI requests, extraction, or bulk capture.
+- Script execution or test-suite reruns.
+- API integration, autonomous matching, or feature expansion.
+
+R2 completion does not establish full pilot acceptance, engineering
+approval, or production readiness.
 ## R3 — Inventory existing pilot code before migration
 
 Acceptance criteria:
