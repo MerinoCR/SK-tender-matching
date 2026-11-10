@@ -31,9 +31,9 @@ next tasks—without authorizing implementation or data migration.
       .gitignore.txt no longer exists.
 - [x] The inspected baseline contains only the four preparation files;
       no code, product datasets, or tender attachments are included.
-- [ ] Review the final changes for credentials, signed access links,
+- [x] Review the final changes for credentials, signed access links,
       and other prohibited sensitive content.
-- [ ] Record the owner's explicit acceptance of this baseline.
+- [x] Record the owner's explicit acceptance of this baseline.
 
 ### Review evidence
 
@@ -67,10 +67,12 @@ Mark R1 Complete only after:
 
 ### Owner acceptance
 
-Decision: Pending
-Decision date: Pending
-Approved commit: Pending
-Notes: Pending
+Decision: Accepted
+Decision date: 2026-11-10
+Approved baseline commit: 9d866e5a5efddfc353b0966aea19b779172d0d73
+Notes: Documentation-only repository baseline accepted.
+No implementation, data migration, retrieval, or pilot acceptance
+is authorized by this decision.
 
 ### Boundaries
 
