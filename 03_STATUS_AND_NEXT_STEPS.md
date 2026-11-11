@@ -22,6 +22,29 @@ and are not necessarily included in this repository.
 
 ## Executive status
 
+### Static baseline and bounded complete-module compatibility, 2026-11-11
+
+The static executable baseline is identified. Three records were persisted
+to external Project Files and verified by read-back: folder
+`pilots/patient-stretcher/offline-comparison/baseline-2026-11-11/`,
+containing `PILOT_BASELINE_STATUS.md`, `PILOT_BASELINE_MANIFEST.json` and
+`PILOT_BASELINE_INVENTORY.csv`. These are Project artifacts, not files
+included in this GitHub repository.
+
+A new execution of the unchanged adapter suite against the complete verified
+legacy originals passed 20/20 tests, with no failures, errors or skips and
+exit status 0. Unittest elapsed time was 0.464 seconds, separate from the
+supplied historical 0.194-second report. Runtime verification confirmed the
+expected complete-original imports in the parent process and three CLI
+subprocesses. The existing suite's synthetic reference-hash substitution
+remained in use.
+
+This demonstrates bounded complete-module compatibility within the suite's
+synthetic-fixture scope, not a real pinned-matrix run, reviewed real-case
+assessment, product compliance, engineering confirmation, full end-to-end
+acceptance or pilot acceptance. This documentation update does not authorize
+subsequent implementation or migration work.
+
 **51201-0003 rerun after owner interpretations, 2026-11-10:** The dimensions/manual/extra-function questions are closed: 193 ×64 cm is overall size; manual height requires hand crank and excludes hydraulics; unrequested functions are not scoring benefits and disadvantage functional/price fit. The live scenario report supersedes its initial provisional pair 1107040565/1107040609, now withdrawn for documented hydraulic-height and extra-function differences. Rechecking the 95 stored records found one explicit hand-crank-height record, 1107040001/SKB038-2; it is an exploratory near-match base only, with overall size 190 ×70 cm, height 62–90 cm, backrest 65°, five-inch wheels, PP rails and substantial remaining gaps. No second SKU is substantiated: related 1107040012 cannot inherit its mechanism. Evidence screening buckets are 1 hand-crank-height, 33 with hydraulic evidence (not all explicitly height-specific), 61 without established height mechanism. Zero demonstrated compliant candidates, no new retrieval/code/API/engineering request. The useful next evidence proposal is reviewed exact-SKU hand-crank/manual-stretcher descriptions, not further ranking of known hydraulic configurations; another category is not yet verified or authorized for capture.
 
 **Emergency-stretcher scenario reviewed, 2026-11-10:** New source `Mexico-Ficha-Tecnica-Camilla-Urgencias-51201-0003.docx` (internal header 53101-1706, Partida 23/Subpartida 23.2, quantity 3) is preserved unchanged under `scenarios/51201-0003`. The separate review screens the existing 95-SKU dataset and proposes 1107040565/SKB041-10 and 1107040609/SKB041-2 as conditional near matches, not compliant products or a verified commercial offer. New requirements include six-inch wheels, folding ABS rails, nylon transfer mattress, manual 50–90 cm elevation, 0–75° backrest and 250 kg safe load. First choice explicitly declares safe working load 220 kg; do not erase that shortfall as mere ambiguity. Dimension reference, hydraulic-versus-crank meaning of manual, and extra-function acceptability remain the three focused interpretation questions. Old dimensional tolerances and case approvals are not imported. Services excluded, certificate module deferred. No new retrieval, software execution or gate pass occurred.
