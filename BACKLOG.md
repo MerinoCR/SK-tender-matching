@@ -95,7 +95,7 @@ engineering approval, or production readiness.
 
 ## R2 — Migrate authoritative project documentation
 
-Status: Complete — documentation migration accepted; merge pending
+Status: Complete — documentation migration accepted and merged
 Owner / approver: Erick Merino
 Scope: Reviewed migration of the three core Project documents only.
 
@@ -193,6 +193,10 @@ Uploaded-document baseline commit:
 d563526ee4bce67547b2f523e910e043ec98156a
 
 Pull request: #1
+Merged: 2026-11-10
+Verified merge commit:
+f4a592fe9aa021d966d76222d11699db39237ee1
+
 Final reviewed content commit:
 aeff620c9c5864377cb6c0500a951b475d1fbe62
 
@@ -287,6 +291,22 @@ R2 does not authorize:
 R2 completion does not establish full pilot acceptance, engineering
 approval, or production readiness.
 ## R3 — Inventory existing pilot code before migration
+
+Status: In progress; inventory and bounded compatibility evidence recorded,
+not confidentiality clearance or migration approval.
+
+Progress, 2026-11-11:
+The Project Files baseline identifies the complete original legacy modules
+and tests, committed policy pair, and supplied adapter/test pair. The
+unchanged adapter suite passed 20/20 against the verified complete originals,
+within its synthetic-fixture scope, including the existing synthetic
+reference-hash substitution. This is distinct from static inventory and
+does not establish a real pinned-matrix run or pilot acceptance.
+
+Confidentiality review for public migration and a proposed minimal migration
+set for separate approval remain pending. Test success does not authorize
+source publication or complete all R3 criteria. See the 2026-11-11 milestone
+in 03_STATUS_AND_NEXT_STEPS.md for the external Project Files evidence.
 
 Acceptance criteria:
 - Identify each script's purpose, dependencies, inputs, and outputs.
