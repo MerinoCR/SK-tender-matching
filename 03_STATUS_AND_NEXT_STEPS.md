@@ -22,6 +22,54 @@ and are not necessarily included in this repository.
 
 ## Executive status
 
+### Owner-accepted one-case real-reference adapter integration, 2026-11-12
+
+One bounded real-reference adapter evaluation completed for the existing
+bounded Hydraulic Trolley case; the `evaluate` command exited with status 0.
+Recorded structural and source-binding checks passed. The real
+production-pinned matrix and complete original modules were used without
+synthetic reference substitution. This is subsequent real-reference evidence,
+distinct from the November 11 synthetic-fixture compatibility run below.
+
+All 35 original requirements remain represented: 19 with mapped policy
+treatment and 16 documentary-only. Documentary findings, reviewed-reference
+findings and owner-policy outcomes remain distinct. The three approved null
+facts (C4 `specified_basis`, C8 `required_range_demonstrated`, C10
+`knee_adjustment`) remained unknown; no evidence was invented to fill them.
+The result and execution record were retained in non-public Project Files
+and successfully read back. The owner subsequently accepted only this
+one-case integration milestone on 2026-11-12; that acceptance was persisted
+and read back in Project Files on the same date.
+
+External evidence, not included in this GitHub repository (plain
+project-relative paths, not repository links):
+- Status record: `pilots/patient-stretcher/offline-comparison/baseline-2026-11-11/PILOT_BASELINE_STATUS.md`,
+  sections “Bounded real-reference adapter evaluation, 2026-11-12” and
+  “Owner acceptance of one-case adapter integration milestone, 2026-11-12”.
+- Evaluation artifact: `pilots/patient-stretcher/offline-comparison/CONCILIACION_POLITICA_REAL_1107040004.csv`;
+  recorded SHA-256 `8f822a8e8532268395d4e57fd69a3224754066ce8ce849fc39d6aeb3358ecbe7`.
+These references report retained external evidence, not evidence migrated
+to or independently reproducible from this repository.
+
+Accepted limitations: the preserved reviewer string reflects the earlier
+preparation state, not current execution status. Legacy mattress wording
+remains alongside separate-customizable-product treatment; neither wording
+establishes mattress-property or final-offer compliance. Topic-level policy
+acceptance does not establish whole-clause compliance: C8 range treatment
+does not establish pneumatic actuation; C16 travel/coverage treatment does
+not establish securing; C29 antistatic customization does not establish
+installed antistatic wheels or satisfy the entire wheel requirement; C35
+owner defaults do not supply all required material and accessory-identification
+evidence.
+
+This milestone establishes no tender or final-offer compliance, confirms no
+engineering feasibility or implementation, and establishes neither general
+adapter accuracy nor support for new specification sheets. It is not overall
+pilot acceptance and upgrades no other pilot gate. It authorizes no code or
+evidence migration, another execution, correction, migration activity or new
+scenario. Public-source confidentiality clearance and a proposed minimal
+migration set with separate approval remain pending under R3.
+
 ### Static baseline and bounded complete-module compatibility, 2026-11-11
 
 The static executable baseline is identified. Three records were persisted
