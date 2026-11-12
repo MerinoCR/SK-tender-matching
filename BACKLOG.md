@@ -308,6 +308,28 @@ set for separate approval remain pending. Test success does not authorize
 source publication or complete all R3 criteria. See the 2026-11-11 milestone
 in 03_STATUS_AND_NEXT_STEPS.md for the external Project Files evidence.
 
+Progress, 2026-11-12:
+Subsequent to the November 11 synthetic-fixture test, one real-reference
+adapter evaluation for the existing bounded Hydraulic Trolley case exited
+with status 0. Recorded structural/source-binding checks passed using the
+production-pinned matrix and complete original modules without synthetic
+reference substitution. All 35 requirements remain represented: 19 with
+mapped policy treatment and 16 documentary-only; documentary, reviewed-reference
+and policy findings remain distinct, and the three approved null facts remain
+unknown. Result/execution records and the owner's subsequent bounded one-case
+milestone acceptance were retained and read back in non-public Project Files.
+See the 2026-11-12 milestone in 03_STATUS_AND_NEXT_STEPS.md for the external
+evidence paths, recorded result hash, accepted presentation limitations and
+C8/C16/C29/C35 partial-clause boundaries.
+
+R3 remains in progress, not complete. Confidentiality clearance for public
+source migration remains pending. A proposed minimal migration set and its
+separate approval also remain pending. This result establishes no tender or
+final-offer compliance, engineering feasibility/implementation, general adapter
+accuracy, new-sheet support or overall pilot acceptance; it upgrades neither
+R4 nor any other pilot gate and authorizes no code/evidence migration, another
+execution, correction or new scenario.
+
 Acceptance criteria:
 - Identify each script's purpose, dependencies, inputs, and outputs.
 - Separate recorded test results from tests actually rerun.
